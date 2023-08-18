@@ -69,7 +69,7 @@ The coverage report will be located at `coverage/index.html`, and can be viewed 
 
 # Proteus
 ### Installation
-This project was built using Foundry, which you can install here: https://onbjerg.github.io/foundry-book/getting-started/installation.html
+This project was built using Foundry, which you can install here: https://book.getfoundry.sh/getting-started/installation
 
 The Proteus smart contract can be tested by running `forge test` from the root directory of the repository.
 
@@ -142,7 +142,7 @@ slither . --filter-path "mocks|openzeppelin|fungibilizer|auth|test|ocean|lib|scr
 #### Testing
 The tests are located [here](https://github.com/Shell-Protocol/Shell-Protocol/tree/main/src/test)
 
-You need foundry to run the tests, which you can install [here](https://onbjerg.github.io/foundry-book/getting-started/installation.html)
+You need foundry to run the tests, which you can install [here](https://book.getfoundry.sh/getting-started/installation)
 
 To compile the contracts run
 ```shell
