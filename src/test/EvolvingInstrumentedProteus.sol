@@ -62,25 +62,6 @@ contract EvolvingInstrumentedProteus is EvolvingProteus {
         maxInput = uint256(_max) * 10;
     }
 
-    // function tInit() view public returns (uint256) {
-    //     return t_init();
-    // }
-    // function tFinal() view public returns (uint256) {
-    //     return t_final();
-    // }
-    // function a() view public returns (int256) {
-    //     return a();
-    // }
-    // function b() view public returns (int256) {
-    //     return b();
-    // }
-    // function p_min() view public returns (int256) {
-    //     return p_min();
-    // }
-    // function p_max() view public returns (int256) {
-    //     return p_max();
-    // }
-
     function printConfig() view public returns (int128, int128, int128, int128) {
         return (py_init, px_init, py_final, px_final);
     }
