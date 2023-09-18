@@ -301,7 +301,7 @@ contract ForkEvolvingProteus is Test {
     Logs all the curve equation related parameters
   */
   function _logPoolParams() internal {
-    (, , , , uint t_init, uint t_final) = _evolvingProteus.data();
+    (, , , , uint t_init, uint t_final,) = _evolvingProteus.poolParams();
 
     (uint256 xBalanceAfterDeposit, uint256 yBalanceAfterDeposit) = _getBalances();
     int256 utility = _evolvingProteus.getUtility(int256(xBalanceAfterDeposit), int256(yBalanceAfterDeposit));

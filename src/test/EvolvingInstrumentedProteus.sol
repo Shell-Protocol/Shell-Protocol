@@ -66,10 +66,6 @@ contract EvolvingInstrumentedProteus is EvolvingProteus {
         return (py_init, px_init, py_final, px_final);
     }
 
-    function data() public view returns (int128,int128,int128,int128,uint256,uint256) {
-        return (py_init, px_init, py_final, px_final, t_init, t_final);
-    }
-
     function reserveTokenSpecified(
         SpecifiedToken specifiedToken,
         int256 specifiedAmount,
