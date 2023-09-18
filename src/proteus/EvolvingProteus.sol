@@ -218,7 +218,7 @@ contract EvolvingProteus is ILiquidityPoolImplementation {
     /**
        @notice Returns all the pool configuration params in a tuple
     */
-    function poolParams() public view returns (int128,int128,int128,int128,uint256,uint256, uint256) {
+    function params() public view returns (int128,int128,int128,int128,uint256,uint256, uint256) {
         return (py_init, px_init, py_final, px_final, t_init, t_final, curveEvolutionDuration);
     }
 
