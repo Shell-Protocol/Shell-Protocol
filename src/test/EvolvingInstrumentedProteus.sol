@@ -14,8 +14,6 @@ contract EvolvingInstrumentedProteus is EvolvingProteus {
     using ABDKMath64x64 for int128;
     using ABDKMath64x64 for int256;
 
-    int128 private constant ABDK_ONE = int128(int256(1 << 64));
-
     constructor(
         int128 py_init,
         int128 px_init,
@@ -46,7 +44,7 @@ contract EvolvingInstrumentedProteus is EvolvingProteus {
         int256 yi, 
         bool token
     ) public view returns (uint256 maxInput) {
-        int256 utility = _getUtility(xi, yi); //call to config.a() and config.b()
+        int256 utility = _getUtility(xi, yi);
         int256 xf;
         int256 yf;
 
@@ -64,31 +62,31 @@ contract EvolvingInstrumentedProteus is EvolvingProteus {
         maxInput = uint256(_max) * 10;
     }
 
-    function tInit() view public returns (uint256) {
-        return config.t_init();
-    }
-    function tFinal() view public returns (uint256) {
-        return config.t_final();
-    }
-    function a() view public returns (int256) {
-        return config.a();
-    }
-    function b() view public returns (int256) {
-        return config.b();
-    }
-    function p_min() view public returns (int256) {
-        return config.p_min();
-    }
-    function p_max() view public returns (int256) {
-        return config.p_max();
-    }
+    // function tInit() view public returns (uint256) {
+    //     return t_init();
+    // }
+    // function tFinal() view public returns (uint256) {
+    //     return t_final();
+    // }
+    // function a() view public returns (int256) {
+    //     return a();
+    // }
+    // function b() view public returns (int256) {
+    //     return b();
+    // }
+    // function p_min() view public returns (int256) {
+    //     return p_min();
+    // }
+    // function p_max() view public returns (int256) {
+    //     return p_max();
+    // }
 
     function printConfig() view public returns (int128, int128, int128, int128) {
-        return (config.py_init(), config.px_init(), config.py_final(), config.px_final());
+        return (py_init, px_init, py_final, px_final);
     }
 
     function data() public view returns (int128,int128,int128,int128,uint256,uint256) {
-        return (config.py_init(), config.px_init(), config.py_final(), config.px_final(), config.t_init(), config.t_final());
+        return (py_init, px_init, py_final, px_final, t_init, t_final);
     }
 
     function reserveTokenSpecified(
