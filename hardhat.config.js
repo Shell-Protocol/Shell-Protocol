@@ -43,8 +43,8 @@ const hhConf = {
     }
   },
   networks: {
-    arbitrumRinkeby: {
-      url: `https://rinkeby.arbitrum.io/rpc`
+    arbitrumGoerli: {
+        url: 'https://goerli-rollup.arbitrum.io/rpc'
     }
   }
 };
@@ -53,14 +53,14 @@ if (PRIVATE_KEY) {
   hhConf.networks.localhost = {
     accounts: [PRIVATE_KEY]
   }
-  hhConf.networks.arbitrumRinkeby.accounts = [PRIVATE_KEY]
+  hhConf.networks.arbitrumGoerli.accounts = [PRIVATE_KEY]
 }
 
 if (ETHERSCAN_KEY) {
   hhConf.etherscan = {
     apiKey: {
       arbitrumOne: ETHERSCAN_KEY,
-      arbitrumTestnet: ETHERSCAN_KEY,
+      arbitrumGoerli: ETHERSCAN_KEY,
     }
   }
 }
