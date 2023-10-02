@@ -69,7 +69,7 @@ The coverage report will be located at `coverage/index.html`, and can be viewed 
 
 # Proteus
 ### Installation
-This project was built using Foundry, which you can install here: https://onbjerg.github.io/foundry-book/getting-started/installation.html
+This project was built using Foundry, which you can install here: [https://onbjerg.github.io/foundry-book/getting-started/installation.html](https://book.getfoundry.sh/getting-started/first-steps)
 
 The Proteus smart contract can be tested by running `forge test` from the root directory of the repository.
 
